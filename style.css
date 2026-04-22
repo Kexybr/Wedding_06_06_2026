@@ -1,0 +1,762 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sansation', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Great Vibes', cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Sansation', sans-serif;
+    scroll-behavior: smooth;
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.page {
+    width: 375px;
+    min-height: 100vh;
+    background: #EDEBE7;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ===== СЕКЦИИ ===== */
+.screen {
+    position: relative;
+    width: 100%;
+}
+
+/* ===== 1 БЛОК ===== */
+.screen--first {
+    height: 720px;
+}
+
+.names {
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px;
+    text-align: center;
+    color: #593B1F;
+
+    z-index: 10;
+}
+
+.photo {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 290px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+.decor--top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+}
+
+.decor--bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 140px;
+    z-index: 10;
+}
+
+.wedding {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    color: #6b4b2a;
+    z-index: 12;
+    opacity: 1;
+}
+
+.wedding--left {
+    left: 10px;
+    top: 380px;
+    --rotate: -10deg;
+}
+
+.wedding--right {
+    right: 1px;
+    top: 220px;
+    --rotate: 10deg;
+}
+
+/* ===== 2 БЛОК ===== */
+
+
+.screen--second {
+    height: 940px;
+    margin-top: -220px;
+}
+
+/* фон */
+.oval {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #456B42;
+    border-radius: 70px;
+    z-index: 8;
+}
+
+/* базовый класс */
+.el {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.el-title {
+    top: 120px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+}
+
+/* линия декор */
+.el-line-decor {
+    top: 170px;
+    width: 220px;
+}
+
+/* основной текст */
+.el-text {
+    top: 214px;
+    width: 280px;
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.1;
+}
+
+/* линия */
+.el-line {
+    top: 328px;
+    width: 220px;
+}
+
+/* "Коли" */
+.el-koli {
+    top: 350px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+}
+
+/* ===== КАЛЕНДАРЬ ===== */
+.el-calendar {
+    top: 440px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+}
+
+.calendar-month {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.calendar-days {
+    font-family: 'Sansation', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px 8px; /* вертикаль / горизонталь */
+    justify-items: center;
+    width: 260px; /* 🔥 ВАЖНО */
+}
+
+.week {
+    font-family: 'Sansation', sans-serif;
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+.day {
+    font-family: 'Sansation', sans-serif;
+    font-size: 16px;
+}
+
+
+
+/* сердечко */
+.el-heart {
+    position: absolute;
+    top: 464px;
+    left: 73%;
+    transform: translateX(-50%);
+    width: 58px;
+}
+
+.calendar-label {
+    position: absolute;
+    top: 535px;
+    left: 76%; /* сдвигаем правее */
+    transform: translateX(-50%) rotate(-15deg);;
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #fff;
+}
+
+/* линия */
+.el-line2 {
+    top: 600px;
+    width: 220px;
+}
+
+.el-line-decor,
+.el-line,
+.el-line2 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===== ВРЕМЯ ===== */
+
+.el-time1,
+.el-time2,
+.el-time3 {
+    left: 35%;
+    transform: none;
+    text-align: left;
+    width: 200px;
+}
+
+.el-time1 { top: 630px; }
+.el-time2 { top: 730px; }
+.el-time3 { top: 830px; }
+
+.time {
+    font-size: 26px;
+    opacity: 0.9;
+}
+
+.time-text {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 30px;
+    margin-top: 4px;
+}
+
+/* цветок */
+.el-flower {
+    position: absolute;
+    left: 75%;
+    bottom: -60px;
+    width: 180px;
+    opacity: 0.9;
+}
+
+
+
+
+
+/* ===== 3 БЛОК ===== */
+.screen--third {
+    height: 500px;
+    margin-top: -80px
+   
+}
+
+.third-photo {
+    width: 110%;
+    border-radius: 0px;
+}
+
+/* ===== 4 БЛОК ===== */
+.screen--fourth {
+    height: 950px;
+    padding-top: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.decor4-top {
+    position: absolute;
+    right: 0;
+    margin-top: -110px;
+    width: 120px;
+}
+
+.loc-title {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px;
+    color: #593B1F;
+    margin-top: -10px;
+}
+
+
+
+.dress-title {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #593B1F;
+    margin-top: 0px;
+}
+
+.loc-title_1 {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #593B1F;
+}
+
+.loc-text,
+.dress-text {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    width: 260px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #593B1F;
+}
+
+
+
+.loc-text_1 {
+    font-weight: 700;
+}   
+
+.loc-btn {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background: #6b4b2a;
+    color: #F8F8F5;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.loc-line { 
+    width: 280px; 
+    margin-top: -15px;
+    
+}
+
+.dress-title { 
+    font-family: 'Great Vibes', cursive;
+    width: 180px; 
+    margin: 10px auto; 
+}
+
+.dress-photo-wrap {
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+}
+
+.dress-photo-wrap img {
+    width: 1cm0;
+    border-radius: 15px;
+}
+
+.wedding {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    color: #6b4b2a;
+    opacity: 0.3;
+    z-index: 5;
+}
+
+.wedding---left {
+    left: -50px;
+    top: 60%;
+    --rotate: -15deg;
+}
+
+.wedding---right {
+    right: -50px;
+    top: 20%;
+    --rotate: 15deg;
+}
+
+.dress-photo-wrap {
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+}
+
+.dress-photo-wrap img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.dress-text {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    width: 280px; 
+    margin: 20px auto; 
+    color: #593B1F;
+}
+
+.palette {
+    display: block;
+    width: 260px; /* подгони под макет */
+    margin: 15px auto 0;
+}
+
+.decor4-bottom {
+    position: absolute;
+    left: 0;
+    bottom: -180px;
+    width: 140px;
+    z-index: 10;
+}
+
+
+/* ===== 5 БЛОК ===== */
+
+.screen--fifth {
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ЗЕЛЕНЫЙ ОВАЛ */
+.oval-last {
+    position: relative; /* ВАЖНО: убрали absolute */
+    width: 100%;
+    height: 100%;
+    background: #456B42;
+    border-radius: 90px;
+
+    padding: 50px 20px 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ЗАГОЛОВОК */
+.gift-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #F8F8F5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ОСНОВНОЙ ТЕКСТ */
+.gift-text {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+
+.gift-text-inner {
+    max-width: 350px;
+    text-align: center;
+    color: #F8F8F5;
+}
+
+.gift-text p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.gift-text .mt {
+    margin-top: 14px;
+}
+
+/* ВЫДЕЛЕННАЯ СТРОКА */
+.gift-highlight {
+    font-family: 'Sansation', sans-serif;
+    font-style: Bold italic;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #F8F8F5;
+}
+
+/* ЛИНИЯ */
+.gift-line {
+    width: 220px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 10px auto;
+}
+
+/* НИЖНИЙ ТЕКСТ */
+.gift-subtext {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.1;
+    color: #F8F8F5;
+}
+
+/* КНОПКА */
+.gift-btn {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+
+    padding: 12px 26px;
+    background: #E6DED2;
+    color: #593B1F;
+
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.gift-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* ===== 6 БЛОК ===== */
+/* ===== КОНТАКТЫ ===== */
+
+.screen--contacts {
+    padding: 30px -40px;
+    text-align: center;
+}
+
+/* ЗАГОЛОВОК */
+.contacts-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #593B1F;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* ТЕКСТ */
+.contacts-text {
+    font-family: 'Sansation', sans-serif;
+    font-style: italic;
+    color: #593B1F;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* ЛЮДИ */
+.contacts-people {
+    width: 260px;
+    margin: 0 auto 20px;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+    font-family: 'Sansation', sans-serif;
+    font-style: Bold italic;
+    color: #593B1F;
+}
+
+/* НАДПИСЬ */
+.contacts-wait {
+    position: absolute;
+
+    top: 190px;   /* поднимаем над фото */
+    left: 20px;  /* немного влево */
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #593B1F;
+    line-height: 0.9;
+
+    transform: rotate(-15deg);
+
+    z-index: 1;
+}
+
+/* ФОТО */
+.contacts-photo-wrap {
+    padding-top: 40px;
+    position: relative;
+    width: 260px;
+    margin: 0 auto -15px;
+
+}
+
+.contacts-photo {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ДЕКОР */
+.heart-left {
+    position: absolute;
+    left: -30px;
+    top: 60%;
+    width: 25px;
+}
+
+.heart-right {
+    position: absolute;
+    right: -30px;
+    top: 30%;
+    width: 25px;
+}
+
+.flower {
+    position: absolute;
+    right: -50px;
+    bottom: -40px;
+    width: 80px;
+    opacity: 1;
+    filter: 
+        contrast(0.1)
+        brightness(0.3)
+        saturate(1.2);
+
+    z-index: 2;
+    color: #593B1F;
+}
+
+
+
+
+
+
+
+/* ===== КНОПКИ ===== */
+.btn {
+    width: 60%;
+    padding: 10px 20px;
+
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.btn-light {
+    margin-left: -80px;
+    color: #000;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zoom-img {
+    transform: scale(0.85);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.zoom-img.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.title-anim {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 2s ease;
+}
+
+.title-anim.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.names.title-anim {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+    transition: all 2s ease;
+}
+
+.names.title-anim.active {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* небольшая задержка */
+.title-anim.delay-1 { transition-delay: 0.2s; }
+.title-anim.delay-2 { transition-delay: 0.4s; }
+.title-anim.delay-3 { transition-delay: 0.6s; }
+
+.center-anim {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+    transition: all 0.8s ease;
+}
+
+.center-anim.active {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.wedding.title-anim {
+    opacity: 0;
+    transform: translateY(40px) rotate(var(--rotate));
+    transition: all 1s ease;
+}
+
+.wedding.title-anim.active {
+    opacity: 0.7;
+    transform: translateY(0) rotate(var(--rotate));
+}
